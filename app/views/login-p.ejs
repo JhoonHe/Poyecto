@@ -15,18 +15,21 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/registro-interfaz">Register</a></li>
+                    <li><a href="/registro-tendero">Register</a></li>
                     <!-- <li><a href="/login-interfaz">Login</a></li> -->
                 </ul>
             </nav>
         </header> 
         <div class="formulario">
-            <h2>LOGIN</h2>
-            <form class="form" action="/login" method="post">
+            <h2>INGRESO COMO PROVEEDOR</h2>
+            <form class="form" action="/login-p" method="post">
                 <input class="datos" type="text" name="correo" placeholder="Correo">
                 <input class="datos" type="password" name="contrasena" placeholder="Contraseña">
                 <input type="submit">
             </form>
+            <div class="link">
+                <p>Ingresar como <a href="/login-tendero">TENDERO</a></p>
+            </div>
         </div>    
     </main>
 </body>

@@ -28,7 +28,7 @@ const pool = mysql.createPool({
     host            : 'localhost',
     user            : 'root',
     password        : '1234',
-    database        : 'modulos',
+    database        : 'proyecto',
     debug        : false
 });
 
@@ -50,37 +50,59 @@ app.get('/registro-proveedor', (req, res) => {
     return res.render('registro-p')
 });
 
-app.post('/registro', (req, res) => {
+app.post('/registro-t', (req, res) => {
     let correo = req.body.correo;
     let nombres = req.body.nombres;
     let apellidos = req.body.apellidos;
     let contrasenia = req.body.contrasenia;
-    let edad = req.body.edad;
     let telefono = req.body.telefono;
 
     const saltRounds = 10;
     const salt = bcrypt.genSaltSync(saltRounds);
 
     const hash = bcrypt.hashSync(contrasenia, salt);
-    pool.query("insert into usuario values (?,?,?,?,?,?)", [correo, nombres, apellidos, hash, edad, telefono],
+    pool.query("insert into tendero values (?,?,?,?,?)", [correo, nombres, apellidos, hash, telefono],
 
     (error) => {
         if(error) throw error;
         // res.send('Registro éxitoso');
-        return res.redirect('/login-interfaz');
+        return res.redirect('/login-tendero');
     });
 });
 
-app.get('/login-interfaz', (req, res) => {
-    return res.render('login')
+app.post('/registro-p', (req, res) => {
+    let correo = req.body.correo;
+    let nombre = req.body.nombre;
+    let contrasenia = req.body.contrasenia;
+    let telefono = req.body.telefono;
+
+    const saltRounds = 10;
+    const salt = bcrypt.genSaltSync(saltRounds);
+
+    const hash = bcrypt.hashSync(contrasenia, salt);
+    pool.query("insert into proveedor values (?,?,?,?)", [correo, nombre, hash, telefono],
+
+    (error) => {
+        if(error) throw error;
+        // res.send('Registro éxitoso');
+        return res.redirect('/login-proveedor');
+    });
 });
 
-app.post('/login', (req, res) => {
+app.get('/login-tendero', (req, res) => {
+    return res.render('login-t')
+});
+
+app.get('/login-proveedor', (req, res) => {
+    return res.render('login-p')
+});
+
+app.post('/login-t', (req, res) => {
 
     let correo          = req.body.correo;
     let contrasenia     = req.body.contrasena;
 
-    pool.query("select contrasenia, nombres, apellidos from usuario where correo= ?", [correo], (error, data) => {
+    pool.query("select contrasenia, nombres, apellidos from tendero where correo= ?", [correo], (error, data) => {
 
         if (error) throw error;
 
@@ -94,6 +116,36 @@ app.post('/login', (req, res) => {
                 session.correo = correo;
 
                 session.nombres = `${data[0].nombres}`
+
+                return res.redirect('/');
+            }
+            return res.send('Usuario o contraseña incorrecto');
+            // return res.render('registro')
+        }
+        return res.send('Usuario o contraseña incorrecto');
+        // return res.render('registro')
+    })
+});
+
+app.post('/login-p', (req, res) => {
+
+    let correo          = req.body.correo;
+    let contrasenia     = req.body.contrasena;
+
+    pool.query("select contrasenia, nombre from proveedor where correo= ?", [correo], (error, data) => {
+
+        if (error) throw error;
+
+        if (data.length > 0){
+            let contraseniaEncriptada = data[0].contrasenia;
+
+            if(bcrypt.compareSync(contrasenia, contraseniaEncriptada)){
+                // res.render('index')
+                let session = req.session;
+
+                session.correo = correo;
+
+                session.nombres = `${data[0].nombre}`
 
                 return res.redirect('/');
             }
