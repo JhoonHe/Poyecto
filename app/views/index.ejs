@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
     <main>
         <header class="header">
             <div class="logo"><a href="/">LOGO</a></div>
+            <a href="/tienda">Tienda</a>
             <input type="search">
             <nav>
                 <ul class="nav-links">
@@ -38,10 +39,61 @@
                 </ul>
             </nav>
         </header>
-        <div class="imgs">
+        <!-- <div class="imgs">
             <img src="/public/img/img2.jpg" alt="leon">
+        </div> -->
+<!-- </main>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="/public/css/style-index.css">
+</head>
+
+<body>
+    <main>
+        <div class="nav">
+            <div class="logo"><a href="">PROVEERTEN</a></div>
+            <a href="/tienda">Tienda</a>
+            <input type="search">
+            <ul>
+                <li><a href="/">INICIO</a></li>
+            </ul>
+            <div class="lista-items">
+                <ul>
+                    <li>
+                        <%if (nombres) { %>
+                            <a href="#">
+                                <%= nombres %>
+                            </a>
+                            <% } %>
+                    </li>
+                    <li>
+                        <%if (!nombres) { %>
+                            <a href="/registro-tendero">Register</a>
+                            <% } %>
+                    </li>
+                    <li>
+                        <%if (!nombres) { %>
+                            <a href="/login-tendero">Login</a>
+                            <% } %>
+                    </li>
+                    <li>
+                        <% if(nombres) { %>
+                            <a href="/logout">Exit</a>
+                            <% } %>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <a href="/tienda">Tienda</a>
     </main>
 </body>
+
 </html>

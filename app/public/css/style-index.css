@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,7 +10,6 @@ main{
     width: 1350px;
     margin: 0 auto;
     background-color: #CBDFC9;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23a7bba5' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 body{
@@ -73,4 +72,62 @@ body{
     width: 1000px;
     border: 10px black solid;
     border-radius: 5px;
+} */
+
+/* Configuración general */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+main{
+    width: 1900px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Configuración nav */
+
+.nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3%;
+    padding-left: 1%;
+    height: 60px;
+}
+
+.nav .logo{
+    font-size: 35px;
+}
+
+.nav #home{
+    position: relative;
+    right: 100px;
+}
+
+.nav .lista-items li{
+    display: inline-block;
+    padding: 0 15px 0 15px;
+}
+
+.nav li:hover{
+    transform: scale(1.1);
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav input[type="search"]{
+    width: 30%;
+    height: 50%;
+    position: relative;
+    right: 80px;
+    padding: 1%;
+}
+
+
