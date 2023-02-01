@@ -34,12 +34,18 @@ const pool = mysql.createPool({
 
 app.get('/', (req, res) => {
     // res.json('Conexión establecida correctamente')
-    let session = req.session;
+    pool.query("select codigo, nombre, url from articulo", (error, data) => {
+        if(error) throw error;
 
-    if(session.correo){
-        return res.render('index', {nombres: session.nombres});
-    } 
-    return res.render('index', {nombres: undefined});
+        if(data.length > 0){
+            let session = req.session;
+
+            if(session.correo){
+                return res.render('index', {nombres: session, articulo: data});
+            }
+            return res.render('index', {nombres: undefined, articulo: data});
+        }
+    });
 });
 
 app.get('/registro-tendero', (req, res) => {

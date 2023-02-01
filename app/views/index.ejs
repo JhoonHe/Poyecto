@@ -63,7 +63,7 @@
             <div class="nav">
                 <div class="logo"><a href="">PROVEERTEN</a></div>
                 <a href="/tienda">Tienda</a>
-                <input type="search">
+                <input type="search" value="Buscar">
                 <ul>
                     <li><a href="/">Inicio</a></li>
                 </ul>
@@ -95,6 +95,22 @@
                 </div>
             </div>
         </header>
+        <h2>PRODUCTOS</h2>
+        <div class="articulos">
+            <% for (let i = 0 ; i < articulo.length ; i++) { %>
+                <div class="articulo">
+                    <h3><%= articulo[i].nombre %></h3>
+                    <div class="img-articulo">
+                        <img src="<%= articulo[i].url %>" alt="imagen-articulo">
+                    </div>
+                    <!-- <p>Valor: <%= articulo[i].valor %></p> -->
+                    <!-- <a href="#"><%= articulo[i].proveedor %></a> -->
+                    <div class="detalle">
+                        <a href="/detalle-producto/<%= articulo[i].codigo %>">Ver detalle</a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
     </main>
 </body>
 
