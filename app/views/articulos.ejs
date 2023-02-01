@@ -38,16 +38,16 @@
                 </ul>
             </nav>
         </header>
-        <% for (let i = 0 ; i < articulos.length ; i++) { %>
+        <% for (let i = 0 ; i < articulo.length ; i++) { %>
             <div class="articulos">
                 <div class="img-articulo">
-                    <img src="<%= articulos[i].url %>" alt="imagen-articulo">
+                    <img src="<%= articulo[i].url %>" alt="imagen-articulo">
                 </div>
-                <h2><%= articulos[i].nombre %></h2>
-                <p>Valor: <%= articulos[i].valor %></p>
-                <a href="#"><%= articulos[i].proveedor %></a>
+                <h2><%= articulo[i].nombre %></h2>
+                <p>Valor: <%= articulo[i].valor %></p>
+                <a href="#"><%= articulo[i].proveedor %></a>
                 <div class="detalle">
-                    <a href="/detalle-producto/<%= articulos[i].codigo %>">Ver detalle</a>
+                    <a href="/detalle-producto/<%= articulo[i].codigo %>">Ver detalle</a>
                 </div>
             </div>
         <% } %>

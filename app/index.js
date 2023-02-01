@@ -165,7 +165,7 @@ app.post('/login-p', (req, res) => {
 
 app.get('/tienda', (req, res) => {
 
-    pool.query("select codigo, nombre, valor, proveedor, url from articulos", (error, data) => {
+    pool.query("select codigo, nombre, valor, proveedor, url from articulo", (error, data) => {
 
         if(error) throw error;
 
@@ -173,9 +173,9 @@ app.get('/tienda', (req, res) => {
             let session = req.session;
 
             if(session.correo){
-                return res.render('articulos', {nombres: session.nombres, articulos: data});
+                return res.render('articulos', {nombres: session.nombres, articulo: data});
             }
-            return res.render('articulos', {nombres: undefined, articulos: data});
+            return res.render('articulos', {nombres: undefined, articulo: data});
         }
         return res.send('No hay artículos en este momento para visualizar');
     });
@@ -183,7 +183,7 @@ app.get('/tienda', (req, res) => {
 
 app.get('/detalle-producto/:codigo', (req, res) => {
 
-    pool.query("select codigo, nombre, valor, proveedor, descripcion, url from articulos where codigo = ?", [req.params.codigo], (error, data) => {
+    pool.query("select codigo, nombre, valor, descripcion, url from articulo where codigo = ?", [req.params.codigo], (error, data) => {
         if(error) throw error;
         console.log(data);
 
@@ -192,9 +192,9 @@ app.get('/detalle-producto/:codigo', (req, res) => {
             let session = req.session;
 
             if(session.correo){
-                return res.render('detalle', {nombres: session.nombres, articulos: data});
+                return res.render('detalle', {nombres: session.nombres, articulo: data});
             }
-            return res.render('detalle', {nombres: undefined, articulos: data});
+            return res.render('detalle', {nombres: undefined, articulo: data});
         }
         return res.send("Error al cargar la información");
     });
