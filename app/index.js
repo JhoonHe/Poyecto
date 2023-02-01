@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
             let session = req.session;
 
             if(session.correo){
-                return res.render('index', {nombres: session, articulo: data});
+                return res.render('index', {nombres: session.nombres, articulo: data});
             }
             return res.render('index', {nombres: undefined, articulo: data});
         }
@@ -165,7 +165,7 @@ app.post('/login-p', (req, res) => {
 
 app.get('/tienda', (req, res) => {
 
-    pool.query("select codigo, nombre, valor, proveedor, url from articulo", (error, data) => {
+    pool.query("select codigo, nombre, valor, url from articulo", (error, data) => {
 
         if(error) throw error;
 
