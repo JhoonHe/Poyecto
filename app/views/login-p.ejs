@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/registro-tendero">Register</a></li>
-                    <!-- <li><a href="/login-interfaz">Login</a></li> -->
+                    <li><a href="/login-interfaz">Login</a></li>
                 </ul>
             </nav>
         </header> 
@@ -31,6 +31,48 @@
                 <p>Ingresar como <a href="/login-tendero">TENDERO</a></p>
             </div>
         </div>    
+    </main>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar como Proveedor</title>
+    <link rel="stylesheet" href="/public/css/style-login.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="nav">
+                <div class="logo"><a href="">PROVEERTEN</a></div>
+                <a href="/tienda">Tienda</a>
+                <input type="search">
+                <ul>
+                    <li id="home"><a href="/">Inicio</a></li>
+                </ul>
+                <div class="lista-items">
+                    <ul>
+                        <!-- <li><a href="/login-interfaz">Ingresar</a></li> -->
+                        <li><a href="/registro-tendero">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="formulario">
+            <h2>INGRESO COMO PROVEEDOR</h2>
+            <form class="form" action="/login-p" method="post">
+                <input class="datos" type="text" name="correo" placeholder="Correo">
+                <input class="datos" type="password" name="contrasena" placeholder="Contraseña">
+                <input type="submit">
+            </form>
+            <div class="link">
+                <p>Ingresar como <a href="/login-tendero">TENDERO</a></p>
+            </div>
+        </div>  
     </main>
 </body>
 </html>

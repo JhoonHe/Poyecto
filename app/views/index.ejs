@@ -59,40 +59,42 @@
 
 <body>
     <main>
-        <div class="nav">
-            <div class="logo"><a href="">PROVEERTEN</a></div>
-            <a href="/tienda">Tienda</a>
-            <input type="search">
-            <ul>
-                <li><a href="/">INICIO</a></li>
-            </ul>
-            <div class="lista-items">
+        <header>
+            <div class="nav">
+                <div class="logo"><a href="">PROVEERTEN</a></div>
+                <a href="/tienda">Tienda</a>
+                <input type="search">
                 <ul>
-                    <li>
-                        <%if (nombres) { %>
-                            <a href="#">
-                                <%= nombres %>
-                            </a>
-                            <% } %>
-                    </li>
-                    <li>
-                        <%if (!nombres) { %>
-                            <a href="/registro-tendero">Register</a>
-                            <% } %>
-                    </li>
-                    <li>
-                        <%if (!nombres) { %>
-                            <a href="/login-tendero">Login</a>
-                            <% } %>
-                    </li>
-                    <li>
-                        <% if(nombres) { %>
-                            <a href="/logout">Exit</a>
-                            <% } %>
-                    </li>
+                    <li><a href="/">Inicio</a></li>
                 </ul>
+                <div class="lista-items">
+                    <ul>
+                        <li>
+                            <%if (nombres) { %>
+                                <a href="#">
+                                    <%= nombres %>
+                                </a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <%if (!nombres) { %>
+                                <a href="/login-tendero">Ingresar</a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <%if (!nombres) { %>
+                                <a href="/registro-tendero">Registrarse</a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <% if(nombres) { %>
+                                <a href="/logout">Exit</a>
+                                <% } %>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </header>
     </main>
 </body>
 
