@@ -95,18 +95,25 @@
                 </div>
             </div>
         </header>
-        <div class="slider"><p>SLIDER</p></div>
+        <div class="slider">
+            <p>SLIDER</p>
+        </div>
         <h2>PROVEEDORES</h2>
         <div class="proveedores">
             <div class="proveedor">
                 <p>PROVEEDORES</p>
+                <% for (let i=0 ; i < proveedor.length ; i++) { %>
+                    <%= proveedor[i].nombre %>
+                        <% } %>
             </div>
         </div>
         <h2>PRODUCTOS</h2>
         <div class="articulos">
-            <% for (let i = 0 ; i < articulo.length ; i++) { %>
+            <% for (let i=0 ; i < articulo.length ; i++) { %>
                 <div class="articulo">
-                    <h3><%= articulo[i].nombre %></h3>
+                    <h3>
+                        <%= articulo[i].nombre %>
+                    </h3>
                     <div class="img-articulo">
                         <img src="<%= articulo[i].url %>" alt="imagen-articulo">
                     </div>
@@ -116,7 +123,7 @@
                         <a href="/detalle-producto/<%= articulo[i].codigo %>">Ver detalle</a>
                     </div>
                 </div>
-            <% } %>
+                <% } %>
         </div>
     </main>
 </body>
