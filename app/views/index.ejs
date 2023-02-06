@@ -54,21 +54,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nav</title>
-    <link rel="stylesheet" href="/public/css/style-index.css">
+    <link rel="stylesheet" href="public/css/style-index2.css">
 </head>
 
 <body>
     <main>
         <header>
             <div class="nav">
-                <div class="logo"><a href="">PROVEERTEN</a></div>
-                <a href="/tienda">Tienda</a>
+                <div class="logo"><a href="#">PROVEERTEN</a></div>
                 <input type="search" value="Buscar">
                 <ul>
-                    <li><a href="/">Inicio</a></li>
-                </ul>
-                <div class="lista-items">
-                    <ul>
+                    <div class="lista-item1">
+                        <li><a href="/tienda">Tienda</a></li>
+                        <li><a href="/">Inicio</a></li>
+                    </div>
+                    <div class="lista-item2">
+
                         <li>
                             <%if (nombres) { %>
                                 <a href="#">
@@ -91,8 +92,9 @@
                                 <a href="/logout">Exit</a>
                                 <% } %>
                         </li>
-                    </ul>
-                </div>
+
+                    </div>
+                </ul>
             </div>
         </header>
         <div class="slider">
@@ -100,13 +102,17 @@
         </div>
         <h2>PROVEEDORES</h2>
         <div class="proveedores">
-            <div class="proveedor">
-                <p>PROVEEDORES</p>
-                <% for (let i=0 ; i < proveedor.length ; i++) { %>
-                    <%= proveedor[i].nombre %>
-                        <% } %>
-            </div>
+            <!-- <p>PROVEEDORES</p> -->
+            <% for (let i=0 ; i < 5 ; i++) { %>
+                <div class="proveedor">
+                    <a href="#">
+                        <img src="<%= proveedor[i].imagen %>" alt="imagen-Proveedor">
+                    </a>
+                    <h3><%= proveedor[i].nombre %></h3>
+                </div>
+                <% } %>
         </div>
+        <div class="clear"></div>
         <h2>PRODUCTOS</h2>
         <div class="articulos">
             <% for (let i=0 ; i < articulo.length ; i++) { %>
@@ -114,9 +120,7 @@
                     <h3>
                         <%= articulo[i].nombre %>
                     </h3>
-                    <div class="img-articulo">
                         <img src="<%= articulo[i].url %>" alt="imagen-articulo">
-                    </div>
                     <!-- <p>Valor: <%= articulo[i].valor %></p> -->
                     <!-- <a href="#"><%= articulo[i].proveedor %></a> -->
                     <div class="detalle">
@@ -124,7 +128,12 @@
                     </div>
                 </div>
                 <% } %>
-        </div>
+            </div>
+            <div class="ver-articulos"><a href="/tienda">Ver más productos</a></div>
+            <div class="clear"></div>
+            <footer>
+                <p>PROVEERTEN &copy;</p>
+            </footer>
     </main>
 </body>
 

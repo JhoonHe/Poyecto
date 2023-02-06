@@ -1,0 +1,170 @@
+/* Configuración principal */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    height: auto;
+    /* width: 1500px; */
+    width: 1900px;
+    border: 2px #eeee solid;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+.clear{
+    clear: both;
+}
+
+/* Nav */
+
+.nav{
+    background-color: black;
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 3px solid white;
+}
+
+.nav ul{
+    list-style: none;
+    /* border: white 2px solid; */
+    width: 700px;
+    float: right;
+}
+
+.nav li{
+    float: left;
+    margin: 0 10px;
+}
+
+.nav .lista-item1{
+    float: left;
+    padding: 0px 20px;
+}
+
+.nav .lista-item2{
+    float: right;
+}
+
+.nav .logo{
+    float: left;
+    font-size: 30px;
+}
+
+.nav .logo a{
+    color: white;
+}
+
+.nav input[type="search"]{
+    margin: 0px 40px;
+    width: 500px;
+    height: 25px;
+    color: #4e4e4ed0;
+    padding: 0px 10px;
+    text-align: left;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+h2{
+    font-size: 50px;
+    text-align: center;
+}
+
+/* Slider */
+
+.slider{
+    height: 500px;
+    width: auto;
+    border: black 2px solid;
+    margin-bottom: 50px;
+}
+
+/* Proveedores */
+
+.proveedores{
+    width: auto;
+    height: 230px;
+    /* border: 2px black solid; */
+    /* background-color: yellow; */
+    padding: 20px 80px;
+    margin: 50px 0px;
+}
+
+.proveedores .proveedor{
+    border: 2px black solid;
+    /* background-color: aqua; */
+    width: 300px;
+    float: left;
+    text-align: center;
+    margin: 0px 20px;
+    padding: 1px;
+}
+
+.proveedores .proveedor img{
+    width: 297px;
+    border-bottom: 2px black solid;
+    height: 150px;
+}
+
+/* Artículos */
+
+.articulos{
+    margin: 50px 150px 0px 150px;
+    border: 2px black solid;
+    padding: 100px;
+    height: 700px;
+    overflow:auto;
+}
+
+.articulos .articulo{
+    text-align: center;
+    border: 1px black solid;
+    width: 200px;
+    float: left;
+    margin: 2%;
+}
+
+.articulos .articulo img{
+    border-bottom: 1px black solid;
+    border-top: 1px black solid;
+    width: 198px;
+    height: 150px;
+}
+
+.articulos a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Ver artículos */
+
+.ver-articulos{
+    background-color: black;
+    border: 2px black solid;
+    width: 300px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+.ver-articulos a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer{
+    margin-top: 100px;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
