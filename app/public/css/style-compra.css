@@ -8,8 +8,8 @@
 
 main{
     height: auto;
-    width: 1500px;
-    /* width: 1900px; */
+    /* width: 1500px; */
+    width: 1900px;
     margin: 0 auto;
     /* background-color: red; */
 }

@@ -1,43 +1,71 @@
+/* Configuración principal */
+
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
 main{
-    width: 1900px;
     height: auto;
+    /* width: 1500px; */
+    width: 1900px;
     margin: 0 auto;
+    /* background-color: red; */
 }
 
-/* Configuración nav */
+.clear{
+    clear: both;
+}
+
+/* Nav */
 
 .nav{
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 3%;
-    padding-left: 1%;
-    height: 60px;
+    background-color: rgb(255, 72, 0);
+    padding: 10px;
+    font-size: 20px;
+    /* border-bottom: 3px solid rgb(255, 187, 0); */
+    border: none;
+}
+
+.nav ul{
+    list-style: none;
+    /* border: white 2px solid; */
+    width: 700px;
+    float: right;
+}
+
+.nav li{
+    float: left;
+    margin: 0 10px;
+}
+
+.nav .lista-item1{
+    float: left;
+    padding: 0px 20px;
+}
+
+.nav .lista-item2{
+    float: right;
+    padding-right: 50px;
 }
 
 .nav .logo{
-    font-size: 35px;
+    float: left;
+    font-size: 30px;
 }
 
-.nav #home{
-    position: relative;
-    right: 100px;
+.nav .logo a{
+    color: white;
 }
 
-.nav .lista-items li{
-    display: inline-block;
-    padding: 0 15px 0 15px;
-}
-
-.nav li:hover{
-    transform: scale(1.1);
+.nav input[type="search"]{
+    margin: 0px 40px;
+    width: 500px;
+    height: 25px;
+    color: #4e4e4ed0;
+    padding: 0px 10px;
+    text-align: left;
 }
 
 .nav a{
@@ -45,30 +73,42 @@ main{
     color: white;
 }
 
-.nav input[type="search"]{
-    width: 30%;
-    height: 50%;
-    position: relative;
-    right: 80px;
-    padding: 1%;
-}
+/* Footer */
 
-.clear{
-    clear: both;
+footer{
+    margin-top: 100px;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    color: white;
 }
 
 /* Login */
 
+.formularios{
+    /* border: 2px black solid; */
+    /* background-color: red; */
+    height: 1000px;
+    width: 1200px;
+    margin: 100px auto;
+}
 
 .formulario{
     margin: 100px auto;
-    width: 700px;
+    width: 500px;
     background-color: white;
     border-radius: 10px;
-    padding: 2% 5%;
-    display: block;
+    padding: 20px 50px;
     text-align: center;
     border: 2px grey solid;
+}
+
+#formulario1{
+    float: left;
+}
+
+#formulario2{
+    float: right;
 }
 
 .formulario h2{
@@ -78,7 +118,7 @@ main{
 
 .formulario .datos{
     width: 100%;
-    margin: 2% 0;
+    margin: 10px 0px;
     border-radius: 10px;
     border: 1px grey solid;
     padding: 1% 1%;

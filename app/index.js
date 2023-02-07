@@ -60,14 +60,6 @@ app.get("/", (req, res) => {
     });
 });
 
-app.get("/registro-tendero", (req, res) => {
-    return res.render("registro-t");
-});
-
-app.get("/registro-proveedor", (req, res) => {
-    return res.render("registro-p");
-});
-
 app.get('/registro-interfaz', (req, res) => {
     return res.render("registro")
 })
@@ -116,14 +108,6 @@ app.post("/registro-p", (req, res) => {
             return res.redirect("/login-proveedor");
         }
     );
-});
-
-app.get("/login-tendero", (req, res) => {
-    return res.render("login-t");
-});
-
-app.get("/login-proveedor", (req, res) => {
-    return res.render("login-p");
 });
 
 app.get("/login-interfaz", (req, res) => {

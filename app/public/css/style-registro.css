@@ -1,94 +1,114 @@
+/* Configuración principal */
+
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-    font-size: 20px;
 }
 
 main{
-    height: 1000px;
-    width: 1350px;
-    margin: 0 auto;
-    background-color: #CBDFC9;
-}
-
-body{
-    background-color: white;
-}
-
-.header{
-    background-color: black;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    height: 85px;
-    padding: 5px 3%;
-}
-
-.header .logo{
-    background-color: mediumorchid;
     height: auto;
-    width: auto;
-    text-align: center;
-    padding: 2px;
-}
-
-.header .logo a{
-    text-decoration: none;
-    color: white;
-}
-
-.header .nav-links{
-    list-style: none;
-}
-
-.header input{
-    width: 50%;
-}
-
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;
-}
-
-.header .nav-links li:hover{
-    transform: scale(1.1);
-}
-
-.header .nav-links a{
-    font-size: 700;
-    color: white;
-    text-decoration: none;
-}
-
-.imgs{
-    display: flex;
-    justify-content: center;
-    padding: 2% 20%;
-}
-
-.imgs img{
-    height: 500px;
-    width: 1000px;
-    border: 10px black solid;
-    border-radius: 5px;
+    /* width: 1500px; */
+    width: 1900px;
+    margin: 0 auto;
+    /* background-color: red; */
 }
 
 .clear{
     clear: both;
 }
 
+/* Nav */
+
+.nav{
+    background-color: rgb(255, 72, 0);
+    padding: 10px;
+    font-size: 20px;
+    /* border-bottom: 3px solid rgb(255, 187, 0); */
+    border: none;
+}
+
+.nav ul{
+    list-style: none;
+    /* border: white 2px solid; */
+    width: 700px;
+    float: right;
+}
+
+.nav li{
+    float: left;
+    margin: 0 10px;
+}
+
+.nav .lista-item1{
+    float: left;
+    padding: 0px 20px;
+}
+
+.nav .lista-item2{
+    float: right;
+    padding-right: 50px;
+}
+
+.nav .logo{
+    float: left;
+    font-size: 30px;
+}
+
+.nav .logo a{
+    color: white;
+}
+
+.nav input[type="search"]{
+    margin: 0px 40px;
+    width: 500px;
+    height: 25px;
+    color: #4e4e4ed0;
+    padding: 0px 10px;
+    text-align: left;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer */
+
+footer{
+    margin-top: 100px;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
 /* Registro */
+
+.formularios{
+    /* border: 2px black solid; */
+    /* background-color: red; */
+    height: 1000px;
+    width: 1200px;
+    margin: 100px auto;
+}
 
 .formulario{
     margin: 100px auto;
-    width: 700px;
+    width: 500px;
     background-color: white;
     border-radius: 10px;
-    padding: 2% 5%;
-    display: block;
+    padding: 20px 50px;
     text-align: center;
     border: 2px grey solid;
+}
+
+#formulario1{
+    float: left;
+}
+
+#formulario2{
+    float: right;
 }
 
 .formulario h2{
@@ -98,7 +118,7 @@ body{
 
 .formulario .datos{
     width: 100%;
-    margin: 2% 0;
+    margin: 10px 0px;
     border-radius: 10px;
     border: 1px grey solid;
     padding: 1% 1%;
