@@ -68,6 +68,10 @@ app.get("/registro-proveedor", (req, res) => {
     return res.render("registro-p");
 });
 
+app.get('/registro-interfaz', (req, res) => {
+    return res.render("registro")
+})
+
 app.post("/registro-t", (req, res) => {
     let correo = req.body.correo;
     let nombres = req.body.nombres;
@@ -121,6 +125,10 @@ app.get("/login-tendero", (req, res) => {
 app.get("/login-proveedor", (req, res) => {
     return res.render("login-p");
 });
+
+app.get("/login-interfaz", (req, res) => {
+    return res.render("login")
+})
 
 app.post("/login-t", (req, res) => {
     let correo = req.body.correo;

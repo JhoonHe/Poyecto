@@ -1,56 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/public/css/style-articulos.css">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="public/css/style-articulos.css">
 </head>
+
 <body>
     <main>
-        <header class="header">
-            <div class="logo"><a href="/">LOGO</a></div>
-            <input type="search">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li>
-                        <%if (nombres) { %>
-                            <a href="#"><%= nombres %></a>
-                        <% } %>
-                    </li>
-                    <li>
-                        <%if (!nombres) { %> 
-                            <a href="/registro-interfaz">Register</a>
-                        <% } %>
-                    </li>
-                    <li>
-                        <%if (!nombres) { %> 
-                            <a href="/login-interfaz">Login</a>
-                            <% } %>
-                    </li>
-                    <li>
-                        <% if(nombres) { %>
-                            <a href="/logout">Exit</a> 
-                        <% } %> 
-                    </li>
+        <header>
+            <div class="nav">
+                <div class="logo"><a href="#">PROVEERTEN</a></div>
+                <input type="search" value="Buscar">
+                <ul>
+                    <div class="lista-item1">
+                        <li><a href="/tienda">Tienda</a></li>
+                        <li><a href="/">Inicio</a></li>
+                    </div>
+                    <div class="lista-item2">
+
+                        <li>
+                            <%if (nombres) { %>
+                                <a href="#">
+                                    <%= nombres %>
+                                </a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <%if (!nombres) { %>
+                                <a href="/login-interfaz">Ingresar</a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <%if (!nombres) { %>
+                                <a href="/registro-interfaz">Registrarse</a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <% if(nombres) { %>
+                                <a href="/logout">Exit</a>
+                                <% } %>
+                        </li>
+
+                    </div>
                 </ul>
-            </nav>
-        </header>
-        <% for (let i = 0 ; i < articulo.length ; i++) { %>
-            <div class="articulos">
-                <div class="img-articulo">
-                    <img src="<%= articulo[i].url %>" alt="imagen-articulo">
-                </div>
-                <h2><%= articulo[i].nombre %></h2>
-                <p>Valor: <%= articulo[i].valor %></p>
-                <a href="#"><%= articulo[i].proveedor %></a>
-                <div class="detalle">
-                    <a href="/detalle-producto/<%= articulo[i].codigo %>">Ver detalle</a>
-                </div>
             </div>
-        <% } %>
+        </header>
+        <div class="articulos">
+            <% for (let i = 0 ; i < articulo.length ; i++) { %>
+                <div class="articulo">
+                    <div class="img-articulo">
+                        <img src="<%= articulo[i].url %>" alt="imagen-articulo">
+                    </div>
+                    <h2><%= articulo[i].nombre %></h2>
+                    <p>Valor: <%= articulo[i].valor %></p>
+                    <a href="#"><%= articulo[i].proveedor %></a>
+                    <div class="detalle">
+                        <a href="/detalle-producto/<%= articulo[i].codigo %>">Ver detalle</a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+            <footer>
+                <p>PROVEERTEN &copy;</p>
+            </footer>
     </main>
 </body>
+
 </html>

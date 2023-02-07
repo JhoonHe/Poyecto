@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="public/css/style-registro2.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="nav">
+                <div class="logo"><a href="#">PROVEERTEN</a></div>
+                <input type="search" value="Buscar">
+                <ul>
+                    <div class="lista-item1">
+                        <li><a href="/tienda">Tienda</a></li>
+                        <li><a href="/">Inicio</a></li>
+                    </div>
+                    <div class="lista-item2">
+                        <li>
+                                <a href="/registro-interfaz">Registrarse</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <div class="formularios">
+            <div class="formulario" id="formulario1">
+                <h2>INGRESO COMO PROVEEDOR</h2>
+                <form class="form" action="/login-p" method="post">
+                    <input class="datos" type="text" name="correo" placeholder="Correo">
+                    <input class="datos" type="password" name="contrasena" placeholder="Contraseña">
+                    <input type="submit">
+                </form>
+            </div>  
+            <div class="formulario" id="formulario2">
+                <h2>INGRESO COMO TENDERO</h2>
+                <form class="form" action="/login-t" method="post">
+                    <input class="datos" type="text" name="correo" placeholder="Correo">
+                    <input class="datos" type="password" name="contrasena" placeholder="Contraseña">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+            <footer>
+                <p>PROVEERTEN &copy;</p>
+            </footer>
+    </main>
+</body>
+
+</html>

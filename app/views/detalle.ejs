@@ -4,39 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Inicio de sesión</title>
     <link rel="stylesheet" href="/public/css/style-detalle.css">
 </head>
 <body>
     <main>
-        <header class="header">
-            <div class="logo"><a href="/">LOGO</a></div>
-            <input type="search">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li>
-                        <%if (nombres) { %>
-                            <a href="#"><%= nombres %></a>
-                        <% } %>
-                    </li>
-                    <li>
-                        <%if (!nombres) { %> 
-                            <a href="/registro-interfaz">Register</a>
-                        <% } %>
-                    </li>
-                    <li>
-                        <%if (!nombres) { %> 
-                            <a href="/login-interfaz">Login</a>
-                            <% } %>
-                    </li>
-                    <li>
-                        <% if(nombres) { %>
-                            <a href="/logout">Exit</a> 
-                        <% } %> 
-                    </li>
+        <header>
+            <div class="nav">
+                <div class="logo"><a href="#">PROVEERTEN</a></div>
+                <input type="search" value="Buscar">
+                <ul>
+                    <div class="lista-item1">
+                        <li><a href="/tienda">Tienda</a></li>
+                        <li><a href="/">Inicio</a></li>
+                    </div>
+                    <div class="lista-item2">
+
+                        <li>
+                            <%if (nombres) { %>
+                                <a href="#">
+                                    <%= nombres %>
+                                </a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <%if (!nombres) { %>
+                                <a href="/login-interfaz">Ingresar</a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <%if (!nombres) { %>
+                                <a href="/registro-interfaz">Registrarse</a>
+                                <% } %>
+                        </li>
+                        <li>
+                            <% if(nombres) { %>
+                                <a href="/logout">Exit</a>
+                                <% } %>
+                        </li>
+
+                    </div>
                 </ul>
-            </nav>
+            </div>
         </header>
         <div class="detalle">
             <div class="img-articulo">
@@ -55,6 +64,10 @@
                 <p><%= articulo[0].descripcion%></p>
             </div>
         <div class="articulos"></div>
+            <footer>
+                <p>PROVEERTEN &copy;</p>
+            </footer>
     </main>
 </body>
+
 </html>

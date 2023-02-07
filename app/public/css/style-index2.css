@@ -8,9 +8,8 @@
 
 main{
     height: auto;
-    /* width: 1500px; */
-    width: 1900px;
-    border: 2px #eeee solid;
+    width: 1500px;
+    /* width: 1900px; */
     margin: 0 auto;
     /* background-color: red; */
 }
@@ -22,10 +21,11 @@ main{
 /* Nav */
 
 .nav{
-    background-color: black;
+    background-color: rgb(255, 72, 0);
     padding: 10px;
     font-size: 20px;
-    border-bottom: 3px solid white;
+    /* border-bottom: 3px solid rgb(255, 187, 0); */
+    border: none;
 }
 
 .nav ul{
@@ -82,7 +82,7 @@ h2{
 .slider{
     height: 500px;
     width: auto;
-    border: black 2px solid;
+    border: grey 2px solid;
     margin-bottom: 50px;
 }
 

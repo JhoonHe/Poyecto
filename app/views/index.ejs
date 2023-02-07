@@ -53,7 +53,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nav</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="public/css/style-index2.css">
 </head>
 
@@ -79,12 +79,12 @@
                         </li>
                         <li>
                             <%if (!nombres) { %>
-                                <a href="/login-tendero">Ingresar</a>
+                                <a href="/login-interfaz">Ingresar</a>
                                 <% } %>
                         </li>
                         <li>
                             <%if (!nombres) { %>
-                                <a href="/registro-tendero">Registrarse</a>
+                                <a href="/registro-interfaz">Registrarse</a>
                                 <% } %>
                         </li>
                         <li>
@@ -103,7 +103,7 @@
         <h2>PROVEEDORES</h2>
         <div class="proveedores">
             <!-- <p>PROVEEDORES</p> -->
-            <% for (let i=0 ; i < 5 ; i++) { %>
+            <% for (let i=0 ; i < 3 ; i++) { %>
                 <div class="proveedor">
                     <a href="#">
                         <img src="<%= proveedor[i].imagen %>" alt="imagen-Proveedor">

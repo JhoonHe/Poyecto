@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+main{
+    height: 1000px;
+    width: 1350px;
+    margin: 0 auto;
+    background-color: #CBDFC9;
+}
+
+body{
+    background-color: white;
+}
+
+.header{
+    background-color: black;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 3%;
+}
+
+.header .logo{
+    background-color: mediumorchid;
+    height: auto;
+    width: auto;
+    text-align: center;
+    padding: 2px;
+}
+
+.header .logo a{
+    text-decoration: none;
+    color: white;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header input{
+    width: 50%;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.imgs{
+    display: flex;
+    justify-content: center;
+    padding: 2% 20%;
+}
+
+
+/* Compra */
+.info-compra{
+    margin: 100px auto;
+    width: 700px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2% 5%;
+    display: block;
+    text-align: center;
+    border: 2px grey solid;
+}
+    .imgs img{
+        height: 500px;
+        width: 1000px;
+        border: 10px black solid;
+        border-radius: 5px;
+    }

@@ -1,82 +1,90 @@
+/* Configuración principal */
+
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-    font-size: 20px;
 }
 
 main{
-    height: 1000px;
-    width: 1350px;
-    margin: 0 auto;
-    background-color: #CBDFC9;
-}
-
-body{
-    background-color: white;
-}
-
-.header{
-    background-color: black;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    height: 85px;
-    padding: 5px 3%;
-}
-
-.header .logo{
-    background-color: mediumorchid;
     height: auto;
-    width: auto;
-    text-align: center;
-    padding: 2px;
+    width: 1500px;
+    /* width: 1900px; */
+    margin: 0 auto;
+    /* background-color: red; */
 }
 
-.header .logo a{
-    text-decoration: none;
-    color: white;
+.clear{
+    clear: both;
 }
 
-.header .nav-links{
+/* Nav */
+
+.nav{
+    background-color: rgb(255, 72, 0);
+    padding: 10px;
+    font-size: 20px;
+    /* border-bottom: 3px solid rgb(255, 187, 0); */
+    border: none;
+}
+
+.nav ul{
     list-style: none;
+    /* border: white 2px solid; */
+    width: 700px;
+    float: right;
 }
 
-.header input{
-    width: 50%;
+.nav li{
+    float: left;
+    margin: 0 10px;
 }
 
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;
+.nav .lista-item1{
+    float: left;
+    padding: 0px 20px;
 }
 
-.header .nav-links li:hover{
-    transform: scale(1.1);
+.nav .lista-item2{
+    float: right;
 }
 
-.header .nav-links a{
-    font-size: 700;
+.nav .logo{
+    float: left;
+    font-size: 30px;
+}
+
+.nav .logo a{
     color: white;
+}
+
+.nav input[type="search"]{
+    margin: 0px 40px;
+    width: 500px;
+    height: 25px;
+    color: #4e4e4ed0;
+    padding: 0px 10px;
+    text-align: left;
+}
+
+.nav a{
     text-decoration: none;
+    color: white;
 }
 
-.imgs{
-    display: flex;
-    justify-content: center;
-    padding: 2% 20%;
-}
+/* Footer */
 
-.imgs img{
-    height: 500px;
-    width: 1000px;
-    border: 10px black solid;
-    border-radius: 5px;
+footer{
+    margin-top: 100px;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    color: white;
 }
 
 /* Artículos */
 
-.articulos{
+.articulo{
     background-color: white;
     border-bottom: 2px black solid;
     display: flex;
@@ -85,6 +93,6 @@ body{
     padding: 2%;
 }
 
-.articulos .img-articulo{
+.articulo .img-articulo{
     border: 2px black solid;
 }

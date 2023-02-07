@@ -82,7 +82,7 @@ footer{
     color: white;
 }
 
-/* Login */
+/* Registro */
 
 .formularios{
     /* border: 2px black solid; */
@@ -127,16 +127,4 @@ footer{
     color: black;
     margin: auto;
     margin: 5% 4%;
-}
-
-/* Compra */
-.info-compra{
-    margin: 100px auto;
-    width: 700px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 2% 5%;
-    display: block;
-    text-align: center;
-    border: 2px grey solid;
 }

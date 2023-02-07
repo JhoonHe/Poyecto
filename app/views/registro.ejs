@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="public/css/style-registro2.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="nav">
+                <div class="logo"><a href="#">PROVEERTEN</a></div>
+                <input type="search" value="Buscar">
+                <ul>
+                    <div class="lista-item1">
+                        <li><a href="/tienda">Tienda</a></li>
+                        <li><a href="/">Inicio</a></li>
+                    </div>
+                    <div class="lista-item2">
+                        <li>
+                                <a href="/login-interfaz">Ingresar</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <div class="formularios">
+            <div class="formulario" id="formulario1">
+                <h2>REGISTRO COMO PROVEEDOR</h2>
+                <form class="form" action="/registro-p" method="post">
+                    <input class="datos" type="text" name="nombre" placeholder="Nombre de la empresa" required>
+                    <input class="datos" type="email" name="correo" placeholder="Correo" required>
+                    <input class="datos" type="password" name="contrasenia" placeholder="Contraseña" required>
+                    <input class="datos" type="tel" name="telefono" placeholder="Teléfono" required>
+                    <input class="datos" type="text" name="imagen" placeholder="Url de imagen" required>
+                    <input type="submit" name="enviar" id="enviar">
+                    <input type="reset" name="limpiar" id="limpiar">
+                </form>
+            </div>
+            <div class="formulario" id="formulario2">
+                <h2>REGISTRO COMO TENDERO</h2>
+                <form class="form" action="/registro-t" method="post">
+                    <input class="datos" type="text" name="nombres" placeholder="Nombres" required>
+                    <input class="datos" type="text" name="apellidos" placeholder="Apellidos" required>
+                    <input class="datos" type="email" name="correo" placeholder="Correo" required>
+                    <input class="datos" type="password" name="contrasenia" placeholder="Contraseña" required>
+                    <input class="datos" type="number" name="edad" placeholder="Edad" required>
+                    <input class="datos" type="tel" name="telefono" placeholder="Teléfono" required>
+                    <input type="submit" name="enviar" id="enviar">
+                    <input type="reset" name="limpiar" id="limpiar">
+                </form>
+            </div>
+        </div>
+            <footer>
+                <p>PROVEERTEN &copy;</p>
+            </footer>
+    </main>
+</body>
+
+</html>
