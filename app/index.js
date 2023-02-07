@@ -82,7 +82,7 @@ app.post("/registro-t", (req, res) => {
         (error) => {
             if (error) throw error;
             // res.send('Registro éxitoso');
-            return res.redirect("/login-tendero");
+            return res.redirect("/login-interfaz");
         }
     );
 });
@@ -105,7 +105,7 @@ app.post("/registro-p", (req, res) => {
         (error) => {
             if (error) throw error;
             // res.send('Registro éxitoso');
-            return res.redirect("/login-proveedor");
+            return res.redirect("/login-interfaz");
         }
     );
 });
